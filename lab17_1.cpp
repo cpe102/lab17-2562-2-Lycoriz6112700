@@ -12,7 +12,6 @@ string tolower_for_str(string x){
 }
 
 int main(){
-    int x=0;
     vector<string>list_name;
     vector<float>list_score;
     vector<char>list_grade;
@@ -36,29 +35,34 @@ int main(){
         else if (sum >= 50 && sum <= 59)grade = 'D';
         else grade = 'F';
         list_grade.push_back(grade);
-        x++;
     }
     while (true){
         string commandtext;
         cout << "Please input your command :";
         getline(cin,commandtext);
+        cout << "--------------------------------------" << "\n";
 
         if(commandtext == "exit") break;
         else if(commandtext.substr(0,6) == "grade "){
             string key = commandtext.substr(6,7);
-            for (int i = 0; i < x; i++){
+            for (int i = 0; i < 27; i++){
                 if (list_grade[i] == key[0]){
                     cout << list_name[i] << "\n";
                 }
             }
         }
         else if(commandtext.substr(0,5) == "name "){
-            int end = commandtext.find_first_of(commandtext);
-            string key = commandtext.substr(5,end);
-            for (int i = 0; i > x; i++){
-                if (list_name[i] == key){
-                cout << list_name[i] << "'s grade = " << list_grade[i];
-                }  
+            string word = commandtext.substr(5,27);
+            word = tolower_for_str(word);
+            vector<string> newname(26);
+            for(int j = 0;j < 26;j++){
+            	newname[j] = tolower_for_str(list_name[j]);
+            }
+            for(int i = 0; i < 26;i++){
+            	if(newname[i] == word){
+            	cout << list_name[i] << "'s grade = " << list_grade[i] << "\n";
+            	cout << "--------------------------------------\n";
+            }
             }   
         }else{
             cout << "Invalid command." << "\n";
