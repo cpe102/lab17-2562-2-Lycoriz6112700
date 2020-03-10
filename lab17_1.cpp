@@ -30,9 +30,9 @@ int main(){
         int sum = a+b+c;
         char grade;
         if(sum >= 80)grade = 'A';
-        else if (sum >= 70 && sum <= 79)grade = 'B';
-        else if (sum >= 60 && sum <= 69)grade = 'C';
-        else if (sum >= 50 && sum <= 59)grade = 'D';
+        else if (sum >= 70)grade = 'B';
+        else if (sum >= 60)grade = 'C';
+        else if (sum >= 50)grade = 'D';
         else grade = 'F';
         list_grade.push_back(grade);
     }
