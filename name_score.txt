@@ -9,7 +9,7 @@ Franky: 9 10 12
 Brook: 20 28 45
 Dracule Mihawk: 20 28 45
 Donquixote Doflamingo: 19 25 48
-Jimbei: 2 10 15
+Jinbei: 2 10 15
 Koby: 5 12 23
 Kizaru: 7 7 21
 Smoker: 15 15 44
